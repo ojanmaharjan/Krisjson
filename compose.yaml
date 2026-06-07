@@ -1,0 +1,17 @@
+services:
+  #this are the apps / container  i want to run
+  #i choose postgres , but we can name it to any ,
+  postgres:
+    #postgres: databas software and leatest newest version
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=krisjson'
+      - 'POSTGRES_PASSWORD=postgres'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - #laptop and container port fot the postgreql
+      - '5432:5433'
+  redis:
+    image: 'redis:latest'
+    ports:
+      - '6379'
