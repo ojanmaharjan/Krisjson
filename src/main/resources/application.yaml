@@ -1,9 +1,13 @@
 spring:
   application:
     name: Krisjson
-
-datasource:
-#    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:krisjson}
+  datasource:
     url: jdbc:postgresql://localhost:5432/krisjson
     username: postgres
     password: postgres
+
+logging:
+  level:
+    org.springframework.web: DEBUG        # ← logs every request
+    org.hibernate.SQL: DEBUG              # ← logs every SQL query
+    org.hibernate.type.descriptor: TRACE  # ← logs SQL parameters
