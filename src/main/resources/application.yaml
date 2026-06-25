@@ -2,7 +2,7 @@ spring:
   application:
     name: Krisjson
   datasource:
-    url: jdbc:postgresql://localhost:5432/krisjson
+    url: jdbc:postgresql://localhost:5433/krisjson
     username: postgres
     password: postgres
 
