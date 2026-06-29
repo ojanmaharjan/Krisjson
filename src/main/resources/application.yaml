@@ -6,6 +6,20 @@ spring:
     username: postgres
     password: postgres
 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+app:
+  jwt:
+    secret: 655be70fd298ab1b80f8509446f84223a16816eec0bcc11a3824ffea9201e418
+    expiration: 86400000  # 24 hours in milliseconds
+
+
 logging:
   level:
     org.springframework.web: DEBUG        # ← logs every request
