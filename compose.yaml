@@ -14,5 +14,22 @@ services:
   redis:
     image: 'redis:latest'
     ports:
-      - 6379
-
+      - 6379:6379
+#
+#  app:
+#    build: .
+#    ports:
+#      - 8080:8080
+#    environment:
+#      - 'SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/krisjson'
+#      - 'SPRING_DATASOURCE_USERNAME=postgres'
+#      - 'SPRING_DATASOURCE_PASSWORD=postgres'
+#      - 'SPRING_DATA_REDIS_HOST=redis'
+#      - 'SPRING_DATA_REDIS_PORT=6379'
+#
+#      #runs after the postgrs and redis
+#    depends_on:
+#      - postgres
+#      - redis
+#
+#
