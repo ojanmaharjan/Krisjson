@@ -1,8 +1,10 @@
 package com.infodev.krisjson.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.infodev.krisjson.login.user.validation.LoginRequest;
+import com.infodev.krisjson.login.user.validation.RegisterRequest;
+import jakarta.validation.Valid;
+import lombok.Value;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * author: Ojan Maharjan
@@ -15,7 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class getApi {
 
     @GetMapping()
-    public String getApi(){
+    public String login(@Valid @RequestBody LoginRequest login){
         return "Hello world";
+    }
+
+    @PostMapping("/register")
+    public String  userRegister(@Valid @RequestBody RegisterRequest request){
+        return null;
     }
 }
